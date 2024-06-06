@@ -1,9 +1,14 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { Provider, useAtom } from 'jotai/react';
 import { createStore } from 'jotai/vanilla';
 import { environmentAtom, atomWithQuery } from 'jotai-relay';
-import { Environment, Network, RecordSource, Store } from 'relay-runtime';
-import graphql from 'babel-plugin-relay/macro';
+import {
+  Environment,
+  Network,
+  RecordSource,
+  Store,
+  graphql,
+} from 'relay-runtime';
 
 const myEnvironment = new Environment({
   network: Network.create(async (params, variables) => {

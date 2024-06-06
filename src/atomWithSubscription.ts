@@ -7,8 +7,8 @@ import type {
   Subscribable,
 } from 'relay-runtime';
 import type { Getter, WritableAtom } from 'jotai/vanilla';
-import { environmentAtom } from './environmentAtom';
-import { createAtom } from './common';
+import { environmentAtom } from './environmentAtom.js';
+import { createAtom } from './common.js';
 
 type Configs = Parameters<typeof requestSubscription>[1]['configs'];
 

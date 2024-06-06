@@ -1,5 +1,5 @@
-import { Environment, Network, RecordSource, Store } from 'relay-runtime';
 import { atom } from 'jotai/vanilla';
+import { Environment, Network, RecordSource, Store } from 'relay-runtime';
 
 // Retrieve the default GraphQL URL from environment variables or fallback to '/graphql'
 const DEFAULT_URL =

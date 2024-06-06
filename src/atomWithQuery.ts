@@ -5,8 +5,8 @@ import type {
   OperationType,
 } from 'relay-runtime';
 import type { Getter, WritableAtom } from 'jotai/vanilla';
-import { environmentAtom } from './environmentAtom';
-import { createAtom } from './common';
+import { environmentAtom } from './environmentAtom.js';
+import { createAtom } from './common.js';
 
 type Config = Parameters<typeof fetchQuery>[3];
 
