@@ -35,68 +35,68 @@ export type AppCountriesQuery = {
   variables: AppCountriesQuery$variables;
 };
 
-const node: ConcreteRequest = (function(){
-var v0 = [
-  {
-    "defaultValue": null,
-    "kind": "LocalArgument",
-    "name": "filter"
-  }
-],
-v1 = [
-  {
-    "alias": null,
-    "args": [
+const node: ConcreteRequest = (function () {
+  var v0 = [
       {
-        "kind": "Variable",
-        "name": "filter",
-        "variableName": "filter"
-      }
+        defaultValue: null,
+        kind: 'LocalArgument',
+        name: 'filter',
+      },
     ],
-    "concreteType": "Country",
-    "kind": "LinkedField",
-    "name": "countries",
-    "plural": true,
-    "selections": [
+    v1 = [
       {
-        "alias": null,
-        "args": null,
-        "kind": "ScalarField",
-        "name": "name",
-        "storageKey": null
-      }
-    ],
-    "storageKey": null
-  }
-];
-return {
-  "fragment": {
-    "argumentDefinitions": (v0/*: any*/),
-    "kind": "Fragment",
-    "metadata": null,
-    "name": "AppCountriesQuery",
-    "selections": (v1/*: any*/),
-    "type": "Query",
-    "abstractKey": null
-  },
-  "kind": "Request",
-  "operation": {
-    "argumentDefinitions": (v0/*: any*/),
-    "kind": "Operation",
-    "name": "AppCountriesQuery",
-    "selections": (v1/*: any*/)
-  },
-  "params": {
-    "cacheID": "11f9c4f05031ba86112beb46f16fb079",
-    "id": null,
-    "metadata": {},
-    "name": "AppCountriesQuery",
-    "operationKind": "query",
-    "text": "query AppCountriesQuery(\n  $filter: CountryFilterInput\n) {\n  countries(filter: $filter) {\n    name\n  }\n}\n"
-  }
-};
+        alias: null,
+        args: [
+          {
+            kind: 'Variable',
+            name: 'filter',
+            variableName: 'filter',
+          },
+        ],
+        concreteType: 'Country',
+        kind: 'LinkedField',
+        name: 'countries',
+        plural: true,
+        selections: [
+          {
+            alias: null,
+            args: null,
+            kind: 'ScalarField',
+            name: 'name',
+            storageKey: null,
+          },
+        ],
+        storageKey: null,
+      },
+    ];
+  return {
+    fragment: {
+      argumentDefinitions: v0 /*: any*/,
+      kind: 'Fragment',
+      metadata: null,
+      name: 'AppCountriesQuery',
+      selections: v1 /*: any*/,
+      type: 'Query',
+      abstractKey: null,
+    },
+    kind: 'Request',
+    operation: {
+      argumentDefinitions: v0 /*: any*/,
+      kind: 'Operation',
+      name: 'AppCountriesQuery',
+      selections: v1 /*: any*/,
+    },
+    params: {
+      cacheID: '11f9c4f05031ba86112beb46f16fb079',
+      id: null,
+      metadata: {},
+      name: 'AppCountriesQuery',
+      operationKind: 'query',
+      text: 'query AppCountriesQuery(\n  $filter: CountryFilterInput\n) {\n  countries(filter: $filter) {\n    name\n  }\n}\n',
+    },
+  };
 })();
 
-(node as any).hash = "9c4afe5e7cb82d3ec7aff5768a489db1";
+(node as any).hash = '9c4afe5e7cb82d3ec7aff5768a489db1';
 
 export default node;

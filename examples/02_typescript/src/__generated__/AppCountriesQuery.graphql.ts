@@ -20,55 +20,55 @@ export type AppCountriesQuery = {
   variables: AppCountriesQuery$variables;
 };
 
-const node: ConcreteRequest = (function(){
-var v0 = [
-  {
-    "alias": null,
-    "args": null,
-    "concreteType": "Country",
-    "kind": "LinkedField",
-    "name": "countries",
-    "plural": true,
-    "selections": [
-      {
-        "alias": null,
-        "args": null,
-        "kind": "ScalarField",
-        "name": "name",
-        "storageKey": null
-      }
-    ],
-    "storageKey": null
-  }
-];
-return {
-  "fragment": {
-    "argumentDefinitions": [],
-    "kind": "Fragment",
-    "metadata": null,
-    "name": "AppCountriesQuery",
-    "selections": (v0/*: any*/),
-    "type": "Query",
-    "abstractKey": null
-  },
-  "kind": "Request",
-  "operation": {
-    "argumentDefinitions": [],
-    "kind": "Operation",
-    "name": "AppCountriesQuery",
-    "selections": (v0/*: any*/)
-  },
-  "params": {
-    "cacheID": "fcc57b51bad56a145681f3d77da8cd00",
-    "id": null,
-    "metadata": {},
-    "name": "AppCountriesQuery",
-    "operationKind": "query",
-    "text": "query AppCountriesQuery {\n  countries {\n    name\n  }\n}\n"
-  }
-};
+const node: ConcreteRequest = (function () {
+  var v0 = [
+    {
+      alias: null,
+      args: null,
+      concreteType: 'Country',
+      kind: 'LinkedField',
+      name: 'countries',
+      plural: true,
+      selections: [
+        {
+          alias: null,
+          args: null,
+          kind: 'ScalarField',
+          name: 'name',
+          storageKey: null,
+        },
+      ],
+      storageKey: null,
+    },
+  ];
+  return {
+    fragment: {
+      argumentDefinitions: [],
+      kind: 'Fragment',
+      metadata: null,
+      name: 'AppCountriesQuery',
+      selections: v0 /*: any*/,
+      type: 'Query',
+      abstractKey: null,
+    },
+    kind: 'Request',
+    operation: {
+      argumentDefinitions: [],
+      kind: 'Operation',
+      name: 'AppCountriesQuery',
+      selections: v0 /*: any*/,
+    },
+    params: {
+      cacheID: 'fcc57b51bad56a145681f3d77da8cd00',
+      id: null,
+      metadata: {},
+      name: 'AppCountriesQuery',
+      operationKind: 'query',
+      text: 'query AppCountriesQuery {\n  countries {\n    name\n  }\n}\n',
+    },
+  };
 })();
 
-(node as any).hash = "f6331e1078a75233ad29a4581b4e4f0f";
+(node as any).hash = 'f6331e1078a75233ad29a4581b4e4f0f';
 
 export default node;
