@@ -1,4 +1,5 @@
-import { atom, Getter, WritableAtom } from 'jotai/vanilla';
+import { atom } from 'jotai/vanilla';
+import type { Getter, WritableAtom } from 'jotai/vanilla';
 import type {
   Disposable,
   Environment,
@@ -6,7 +7,7 @@ import type {
   MutationParameters,
 } from 'relay-runtime';
 import { commitMutation } from 'relay-runtime';
-import { environmentAtom } from './environmentAtom';
+import { environmentAtom } from './environmentAtom.js';
 
 /**
  * Creates a Jotai atom with a Relay mutation.

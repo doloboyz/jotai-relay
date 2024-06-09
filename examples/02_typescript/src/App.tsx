@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { Provider, useAtom } from 'jotai/react';
 import { createStore } from 'jotai/vanilla';
 import { environmentAtom, atomWithQuery } from 'jotai-relay';

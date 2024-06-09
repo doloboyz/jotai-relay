@@ -1,5 +1,6 @@
 import type { Environment, Subscribable } from 'relay-runtime';
-import type { atom, Getter } from 'jotai/vanilla';
+import type { Getter } from 'jotai/vanilla';
+import { atom } from 'jotai/vanilla';
 import { atomWithObservable } from 'jotai/vanilla/utils';
 
 /**

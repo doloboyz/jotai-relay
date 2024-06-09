@@ -1,5 +1,6 @@
-import React, { Suspense } from 'react';
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
+import { Suspense } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
+import type { FallbackProps } from 'react-error-boundary';
 import { Provider, useAtom, useSetAtom } from 'jotai/react';
 import { atom, createStore } from 'jotai/vanilla';
 import { environmentAtom, atomWithQuery } from 'jotai-relay';

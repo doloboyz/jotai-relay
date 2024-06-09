@@ -77,6 +77,9 @@ devDependencies:
   graphql:
     specifier: ^16.8.1
     version: 16.8.1
+  happy-dom:
+    specifier: ^14.12.0
+    version: 14.12.0
   html-webpack-plugin:
     specifier: ^5.6.0
     version: 5.6.0(webpack@5.91.0)
@@ -121,7 +124,7 @@ devDependencies:
     version: 5.2.12
   vitest:
     specifier: ^1.6.0
-    version: 1.6.0
+    version: 1.6.0(happy-dom@14.12.0)
 
 packages:
 
@@ -2244,7 +2247,7 @@ packages:
       jest: 29.7.0(babel-plugin-macros@3.1.0)
       lodash: 4.17.21
       redent: 3.0.0
-      vitest: 1.6.0
+      vitest: 1.6.0(happy-dom@14.12.0)
     dev: true
 
   /@testing-library/react@15.0.7(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1):
@@ -4579,6 +4582,15 @@ packages:
   /graphql@16.8.1:
     resolution: {integrity: sha512-59LZHPdGZVh695Ud9lRzPBVTtlX9ZCV150Er2W43ro37wVof0ctenSaskPPjN7lVTIN8mSZt8PHUNKZuNQUuxw==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
+    dev: true
+
+  /happy-dom@14.12.0:
+    resolution: {integrity: sha512-dHcnlGFY2o2CdxfuYpqwSrBrpj/Kuzv4u4f3TU5yHW1GL24dKij4pv1BRjXnXc3uWo8qsCbToF9weaDsm/He8A==}
+    engines: {node: '>=16.0.0'}
+    dependencies:
+      entities: 4.5.0
+      webidl-conversions: 7.0.0
+      whatwg-mimetype: 3.0.0
     dev: true
 
   /has-bigints@1.0.2:
@@ -7222,7 +7234,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@1.6.0:
+  /vitest@1.6.0(happy-dom@14.12.0):
     resolution: {integrity: sha512-H5r/dN06swuFnzNFhq/dnz37bPXnq8xB2xB5JOVk8K09rUtoeNN+LHWkoQ0A/i3hvbUKKcCei9KpbxqHMLhLLA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -7256,6 +7268,7 @@ packages:
       chai: 4.4.1
       debug: 4.3.5
       execa: 8.0.1
+      happy-dom: 14.12.0
       local-pkg: 0.5.0
       magic-string: 0.30.10
       pathe: 1.1.2
