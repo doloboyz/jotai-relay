@@ -10,6 +10,8 @@ import {
   graphql,
 } from 'relay-runtime';
 
+import type { AppCountriesQuery } from './__generated__/AppCountriesQuery.graphql';
+
 const myEnvironment = new Environment({
   network: Network.create(async (params, variables) => {
     const response = await fetch('https://countries.trevorblades.com/', {
@@ -27,7 +29,7 @@ const myEnvironment = new Environment({
   store: new Store(new RecordSource()),
 });
 
-const countriesAtom = atomWithQuery(
+const countriesAtom = atomWithQuery<AppCountriesQuery>(
   graphql`
     query AppCountriesQuery {
       countries {

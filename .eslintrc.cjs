@@ -22,7 +22,7 @@ module.exports = {
     react: { version: 'detect' },
   },
   rules: {
-    'import/no-unresolved': ['error', { ignore: ['jotai-zustand'] }],
+    'import/no-unresolved': ['error', { ignore: ['jotai-relay'] }],
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
