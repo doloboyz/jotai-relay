@@ -43,7 +43,7 @@
     "relay:01_minimal": "relay-compiler ./examples/01_minimal/relay.config.js",
     "relay:02_typescript": "relay-compiler ./examples/02_typescript/relay.config.js",
     "relay:03_errorhandling": "relay-compiler ./examples/03_errorhandling/relay.config.js",
-    "examples:01_minimal": "DIR=01_minimal EXT=js vite",
+    "examples:01_minimal": "DIR=01_minimal EXT=js vite --host",
     "examples:02_typescript": "DIR=02_typescript EXT=tsx vite",
     "examples:03_errorhandling": "DIR=03_errorhandling EXT=tsx vite"
   },

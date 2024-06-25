@@ -10,9 +10,9 @@ import { Environment, Network, RecordSource, Store } from 'relay-runtime';
 import graphql from 'babel-plugin-relay/macro';
 
 import type {
-  AppCountriesQuery,
+  appCountriesQuery,
   CountryFilterInput,
-} from './__generated__/AppCountriesQuery.graphql';
+} from './__generated__/appCountriesQuery.graphql';
 
 const myEnvironment = new Environment({
   network: Network.create(async (params, variables) => {
@@ -33,9 +33,9 @@ const myEnvironment = new Environment({
 
 const filterAtom = atom<CountryFilterInput | null>({});
 
-const countriesAtom = atomWithQuery<AppCountriesQuery>(
+const countriesAtom = atomWithQuery<appCountriesQuery>(
   graphql`
-    query AppCountriesQuery($filter: CountryFilterInput) {
+    query appCountriesQuery($filter: CountryFilterInput) {
       countries(filter: $filter) {
         name
       }
@@ -47,6 +47,7 @@ const countriesAtom = atomWithQuery<AppCountriesQuery>(
 const Main = () => {
   const [data, dispatch] = useAtom(countriesAtom);
   const setFilter = useSetAtom(filterAtom);
+
   return (
     <div>
       <button type="button" onClick={() => setFilter(null)}>
@@ -56,8 +57,8 @@ const Main = () => {
         Refetch
       </button>
       <ul>
-        {data.countries.map(({ name }) => (
-          <li key={name}>{name}</li>
+        {data.countries.map((country: { name: string }) => (
+          <li key={country.name}>{country.name}</li>
         ))}
       </ul>
     </div>

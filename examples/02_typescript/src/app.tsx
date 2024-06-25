@@ -7,7 +7,7 @@ import { Environment, Network, RecordSource, Store } from 'relay-runtime';
 // @ts-ignore
 import graphql from 'babel-plugin-relay/macro';
 
-import type { AppCountriesQuery } from './__generated__/AppCountriesQuery.graphql';
+import type { appCountriesQuery } from './__generated__/AppCountriesQuery.graphql';
 
 const myEnvironment = new Environment({
   network: Network.create(async (params, variables) => {
@@ -26,9 +26,9 @@ const myEnvironment = new Environment({
   store: new Store(new RecordSource()),
 });
 
-const countriesAtom = atomWithQuery<AppCountriesQuery>(
+const countriesAtom = atomWithQuery<appCountriesQuery>(
   graphql`
-    query AppCountriesQuery {
+    query appCountriesQuery {
       countries {
         name
       }

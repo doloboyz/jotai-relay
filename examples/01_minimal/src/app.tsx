@@ -10,7 +10,7 @@ import {
   graphql,
 } from 'relay-runtime';
 
-import type { AppCountriesQuery } from './__generated__/AppCountriesQuery.graphql';
+import type { appCountriesQuery } from './__generated__/AppCountriesQuery.graphql';
 
 const myEnvironment = new Environment({
   network: Network.create(async (params, variables) => {
@@ -29,9 +29,9 @@ const myEnvironment = new Environment({
   store: new Store(new RecordSource()),
 });
 
-const countriesAtom = atomWithQuery<AppCountriesQuery>(
+const countriesAtom = atomWithQuery<appCountriesQuery>(
   graphql`
-    query AppCountriesQuery {
+    query appCountriesQuery {
       countries {
         name
       }
@@ -42,10 +42,11 @@ const countriesAtom = atomWithQuery<AppCountriesQuery>(
 
 const Main = () => {
   const [data] = useAtom(countriesAtom);
+
   return (
     <ul>
-      {data.countries.map(({ name }) => (
-        <li key={name}>{name}</li>
+      {data.countries.map((country: { name: string }) => (
+        <li key={country.name}>{country.name}</li>
       ))}
     </ul>
   );
